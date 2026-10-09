@@ -1,0 +1,16 @@
+[package]
+name = "deckcraft-wasm"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "DeckCraft for the browser and WebXR: wasm-bindgen exports over deckcraft-bridge (create, dispatch, spatial render tree)"
+
+# No `[lints] workspace = true` here on purpose: the workspace forbids `unsafe_code`, and the code
+# `#[wasm_bindgen]` generates for exports contains unsafe. Our own code in this crate has none.
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+deckcraft-bridge = { path = "../deckcraft-bridge" }
+wasm-bindgen = "0.2"

@@ -12,3 +12,7 @@ packaging/env.sh
 /packaging/linux/flatpak/cargo-sources.json
 /build-flatpak/
 /.flatpak-builder/
+
+# Non-destructive iteration backups
+*_v*old*
+*old_pre*

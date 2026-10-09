@@ -1,0 +1,18 @@
+[package]
+name = "deckcraft-spatial-daemon"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "HoloCore Spatial Daemon for DeckCraft: WebSocket JSON-RPC server on port 8095"
+publish = false
+
+[[bin]]
+name = "deckcraft-spatial-daemon"
+path = "src/main.rs"
+
+[dependencies]
+deckcraft-bridge = { path = "../../crates/deckcraft-bridge" }
+deckcraft-engine = { workspace = true }
+deckcraft-mcp = { workspace = true }
+serde_json = { workspace = true }
+tungstenite = "0.24"

@@ -1,0 +1,17 @@
+[package]
+name = "deckcraft-bridge"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "DeckCraft headless bridge: a JSON AST of the active presentation and a typed command dispatcher for HoloCore XR front ends (WASM or IPC)"
+
+[lints]
+workspace = true
+
+# Deliberately minimal: the engine and the model, plus serde for the JSON wire format.
+# No ui-egui, no DOM, no windowing.
+[dependencies]
+deckcraft-model = { workspace = true }
+deckcraft-engine = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
